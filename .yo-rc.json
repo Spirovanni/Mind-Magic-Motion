@@ -1,0 +1,38 @@
+{
+    "generator-jhipster": {
+        "promptValues": {
+            "packageName": "com.spirovanni.m3",
+            "nativeLanguage": "en"
+        },
+        "jhipsterVersion": "5.8.0",
+        "applicationType": "monolith",
+        "baseName": "M3",
+        "packageName": "com.spirovanni.m3",
+        "packageFolder": "com/spirovanni/m3",
+        "serverPort": "8080",
+        "authenticationType": "jwt",
+        "cacheProvider": "ehcache",
+        "enableHibernateCache": true,
+        "websocket": false,
+        "databaseType": "sql",
+        "devDatabaseType": "mysql",
+        "prodDatabaseType": "mysql",
+        "searchEngine": "elasticsearch",
+        "messageBroker": false,
+        "serviceDiscoveryType": false,
+        "buildTool": "maven",
+        "enableSwaggerCodegen": false,
+        "jwtSecretKey": "MWI4YjEyYTMzMmJiMjQyYjJhOGRkMDQxZDc1MjliZWNjZmM2ZGNiMTExOTRjYmViNmVlMTRmMTYzZjliMTAwNTA1OWZlZWYyNDcyYjY4ZGQxZTNiZjU1YjIwNjM4MmRkNTZjNTQzNDQ3NmViMzI0ZGY0ZGU4YThmZTZhODA5MTA=",
+        "clientFramework": "angularX",
+        "useSass": true,
+        "clientPackageManager": "npm",
+        "testFrameworks": ["gatling", "cucumber", "protractor"],
+        "jhiPrefix": "jhi",
+        "entitySuffix": "",
+        "dtoSuffix": "DTO",
+        "otherModules": [],
+        "enableTranslation": true,
+        "nativeLanguage": "en",
+        "languages": ["en", "es"]
+    }
+}
