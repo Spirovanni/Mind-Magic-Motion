@@ -24,6 +24,8 @@
         "bootstrap": "4.2.1",
         "colors.js": "1.2.4",
         "core-js": "2.6.3",
+        "date-fns": "^2.0.0-alpha.16",
+        "docsearch.js": "^2.5.2",
         "moment": "2.24.0",
         "ng-jhipster": "0.9.0",
         "ngx-cookie": "2.0.1",
