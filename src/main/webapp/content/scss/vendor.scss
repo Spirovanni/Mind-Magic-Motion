@@ -12,3 +12,15 @@ eg $input-color: red;
 @import '~font-awesome/scss/font-awesome';
 
 /* jhipster-needle-scss-add-vendor JHipster will add new css style */
+
+// Theme styles
+@import '~ionicons-inline/dist/ionicons';
+@import '~typeface-exo/index.css';
+@import '~pace-js/templates/pace-theme-flash.tmpl.css';
+@import '~@nebular/theme/styles/prebuilt/default';
+@import '~@nebular/theme/styles/prebuilt/cosmic';
+@import '~@nebular/theme/styles/prebuilt/corporate';
+@import '~roboto-fontface/css/roboto/roboto-fontface.css';
+$nebular-icons-font-path: '~nebular-icons/fonts';
+@import '~nebular-icons/scss/nebular-icons';
+@import '~socicon/css/socicon.css';
