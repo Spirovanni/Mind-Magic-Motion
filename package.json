@@ -51,6 +51,7 @@
         "date-fns": "^2.0.0-alpha.16",
         "docsearch.js": "^2.5.2",
         "intl": "1.2.5",
+        "ionicons-inline": "^1.0.0",
         "jquery": "3.2.1",
         "font-awesome": "4.7.0",
         "highlight.js": "9.12.0",
