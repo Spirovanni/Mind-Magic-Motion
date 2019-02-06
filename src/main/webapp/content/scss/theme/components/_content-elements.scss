@@ -1,0 +1,147 @@
+/*------------------------------------------------------------------------------------------*/
+/* 5. Content Elements */
+/*------------------------------------------------------------------------------------------*/
+
+/* --------- 5.1 Icons ---------- */
+
+/*Font Icon sizes*/
+
+.fa-1x {
+    font-size: 15px !important;
+}
+
+/*Icon Block*/
+
+.career-icon {
+    left: 45px;
+    width: 75px;
+    height: 75px;
+    color: white;
+    //background-image: url('./../../../../content/images/svg/career.svg');
+    //background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 6rem;
+}
+
+.pathway-icon {
+    left: 25px;
+    width: 75px;
+    height: 75px;
+    color: white;
+    //background-image: url('./../../../../content/images/svg/path.svg');
+    //background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 6rem;
+}
+
+.progression-icon {
+    left: 15px;
+    width: 75px;
+    height: 75px;
+    color: white;
+    //background-image: url('./../../../../content/images/svg/progression-tracker.svg');
+    //background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 6rem;
+}
+
+.shield-builder-icon {
+    left: 15px;
+    width: 75px;
+    height: 75px;
+    color: white;
+    //background-image: url('./../../../../content/images/svg/shield-builder.svg');
+    //background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 6rem;
+}
+
+.icon-block {
+    position: relative;
+}
+
+.icon-block h4 {
+    font-weight: bold;
+    padding-top: 0;
+}
+
+.icon-block .icon {
+    position: absolute;
+}
+
+.icon-block p {
+    margin-top: 0;
+}
+
+/* Icon Left*/
+
+.icon-left .icon {
+    left: 15px;
+}
+
+.icon-left .icon-block-description {
+    padding-left: 53px;
+}
+
+/* Icon Right */
+
+.icon-right .icon {
+    right: 15px;
+}
+
+.icon-right .icon-block-description {
+    padding-right: 53px;
+}
+
+/* Icon Above */
+
+.icon-top {
+    display: block;
+}
+
+.icon-top .icon {
+    position: relative;
+    display: block;
+}
+
+.icon-top .icon-block-description {
+    padding-top: 25px;
+}
+
+/* --------- 5.2 Parallax Elements ---------- */
+
+.banner-parallax-1,
+.banner-parallax-2,
+.banner-parallax-3 {
+    min-height: 350px;
+}
+
+/* --------- 5.3 Divider ---------- */
+
+.divider {
+    position: relative;
+    width: 40%;
+    height: 20px;
+    line-height: 20px;
+    margin: 10px auto 5px auto;
+    clear: both;
+    text-align: center;
+}
+
+.divider-inner {
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    top: 50%;
+    margin-top: -1px;
+    border-top: 1px solid;
+    border-color: #e1e1e1;
+}
+
+.divider i {
+    background: #fff;
+    position: relative;
+    top: -11px;
+    padding: 0 5px 0 5px;
+    color: #e1e1e1;
+}
