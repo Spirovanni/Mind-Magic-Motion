@@ -13,13 +13,26 @@ eg $input-color: red;
 
 /* jhipster-needle-scss-add-vendor JHipster will add new css style */
 
+// @nebular theming framework
+@import '~@nebular/theme/styles/theming';
+// @nebular out of the box themes
+@import '~@nebular/theme/styles/themes';
+
+// themes - our custom or/and out of the box themes
+@import './theme/themes';
+
+// framework component themes (styles tied to theme variables)
+@import '~@nebular/theme/styles/globals';
+@import '~@nebular/auth/styles/all';
+@import '~@nebular/bootstrap/styles/globals';
+
+// loading progress bar theme
+@import './pace.theme';
+
 // Theme styles
 @import '~ionicons-inline/dist/ionicons';
 @import '~typeface-exo/index.css';
 @import '~pace-js/templates/pace-theme-flash.tmpl.css';
-@import '~@nebular/theme/styles/globals';
-@import '~@nebular/auth/styles/all';
-@import '~@nebular/bootstrap/styles/globals';
 @import '~@nebular/theme/styles/prebuilt/default';
 @import '~@nebular/theme/styles/prebuilt/cosmic';
 @import '~@nebular/theme/styles/prebuilt/corporate';
@@ -29,7 +42,14 @@ $nebular-icons-font-path: '~nebular-icons/fonts';
 @import '~socicon/css/socicon.css';
 @import './theme/abstracts';
 @import './theme/variables';
-@import './theme/core/palette';
-@import './theme/app-variables';
-@import './theme/mixins';
-@import './theme/components';
+
+// install the framework and custom global styles
+@include nb-install() {
+    // framework global styles
+    @include nb-theme-global();
+    @include nb-auth-global();
+    @include nb-bootstrap-global();
+
+    // loading progress bar
+    @include ngx-pace-theme();
+}
