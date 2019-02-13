@@ -15,12 +15,16 @@ import { NotificationInterceptor } from './blocks/interceptor/notification.inter
 import { M3SharedModule } from 'app/shared';
 import { M3CoreModule } from 'app/core';
 import { M3AppRoutingModule } from './app-routing.module';
-import { M3HomeModule } from './home/home.module';
+import { M3HomeModule } from './home';
 import { M3AccountModule } from './account/account.module';
 import { M3EntityModule } from './entities/entity.module';
 import * as moment from 'moment';
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent, ActiveMenuDirective, ErrorComponent } from './layouts';
+
+// import { CoreModule } from './shared';
+// import { ThemeModule } from './shared';
+// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
     imports: [
