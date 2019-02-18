@@ -1,0 +1,72 @@
+/* --------- 2.1 Header --------- */
+
+#header {
+    height: 81px !important;
+    overflow: visible;
+    z-index: 9999;
+    width: 100%;
+    position: absolute !important;
+}
+
+#header .row {
+    padding: 0;
+}
+
+#header aside {
+    text-align: right;
+}
+
+#header ul {
+    text-align: center;
+}
+
+#header li {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+}
+
+.header {
+    height: 95vh;
+    //background-image: linear-gradient(to right bottom, rgba($color-primary, 0.7), rgba($color-primary, 0.4)),
+    //    url('./../../../../../content/images/img/bigAir.jpg');
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    @include respond(tab-med) {
+        clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 90vh);
+    }
+    @include respond(tab-port) {
+        clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 90vh);
+    }
+    @include respond(phone) {
+        clip-path: polygon(0 0, 100% 0, 100% 88vh, 0 100%);
+    }
+
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+
+    &__logo {
+        height: 5rem;
+        transform: rotate(0);
+        transition-duration: 0.5s;
+    }
+
+    &__logo:hover {
+        transition-duration: 0.5s;
+        transform: rotate(45deg);
+    }
+
+    &__text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
