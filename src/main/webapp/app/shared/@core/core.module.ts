@@ -81,8 +81,8 @@ export const NB_CORE_PROVIDERS = [
 export class CoreModule {
     static forRoot(): ModuleWithProviders {
         return <ModuleWithProviders>{
-            ngModule: CoreModule
-            // providers: [...NB_CORE_PROVIDERS]
+            ngModule: CoreModule,
+            providers: [...NB_CORE_PROVIDERS]
         };
     }
 

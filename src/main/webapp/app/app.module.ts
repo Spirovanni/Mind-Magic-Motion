@@ -22,7 +22,7 @@ import * as moment from 'moment';
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent, ActiveMenuDirective, ErrorComponent } from './layouts';
 
-// import { CoreModule } from './shared';
+import { CoreModule } from './shared';
 // import { ThemeModule } from './shared';
 // import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -38,6 +38,7 @@ import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent
             i18nEnabled: true,
             defaultI18nLang: 'en'
         }),
+        CoreModule.forRoot(),
         M3SharedModule.forRoot(),
         M3CoreModule,
         M3HomeModule,
