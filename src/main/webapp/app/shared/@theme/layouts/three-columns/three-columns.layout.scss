@@ -1,7 +1,6 @@
 @import '../../../../../content/scss/theme/nebular/themes';
 @import '~bootstrap/scss/mixins/breakpoints';
-@import '~@nebular/theme/styles/global/bootstrap/breakpoints';
-
+@import '~@nebular/theme/styles/global/breakpoints';
 @include nb-install-component() {
     nb-layout-column.small {
         flex: 0.15 !important;
@@ -17,7 +16,7 @@
         &.collapsed {
             width: 0;
 
-            /deep/ .main-container {
+            .main-container {
                 width: 0;
 
                 .scrollable {
@@ -27,7 +26,7 @@
             }
         }
 
-        /deep/ .main-container {
+        .main-container {
             width: $sidebar-width;
             background: nb-theme(color-bg);
             transition: width 0.3s ease;
@@ -46,12 +45,12 @@
     nb-sidebar.menu-sidebar {
         margin-top: nb-theme(sidebar-header-gap);
 
-        /deep/ .main-container {
+        .main-container {
             height: calc(#{nb-theme(sidebar-height)} - #{nb-theme(header-height)} - #{nb-theme(sidebar-header-gap)}) !important;
             border-top-right-radius: nb-theme(radius);
         }
 
-        /deep/ nb-sidebar-header {
+        nb-sidebar-header {
             padding-bottom: 0.5rem;
             text-align: center;
         }
@@ -79,7 +78,7 @@
         }
 
         &.compacted {
-            /deep/ nb-sidebar-header {
+            nb-sidebar-header {
                 padding-left: 0;
                 padding-right: 0;
             }
@@ -108,7 +107,7 @@
         nb-sidebar.menu-sidebar {
             margin-top: 0;
 
-            /deep/ .main-container {
+            .main-container {
                 height: calc(#{nb-theme(sidebar-height)} - #{nb-theme(header-height)}) !important;
                 border-top-right-radius: 0;
 

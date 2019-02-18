@@ -46,7 +46,11 @@ $nebular-icons-font-path: '~nebular-icons/fonts';
 @import './theme/app-variables';
 @import './theme/mixins';
 @import './theme/components';
+@import './theme/core';
+@import './theme/custom-bootstrap';
+@import './theme/layouts';
 @import './theme/nebular';
+@import './theme/plugins';
 
 // install the framework and custom global styles
 @include nb-install() {

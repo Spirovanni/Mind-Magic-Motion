@@ -23,8 +23,8 @@ import * as moment from 'moment';
 import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent, ActiveMenuDirective, ErrorComponent } from './layouts';
 
 import { CoreModule } from './shared';
-// import { ThemeModule } from './shared';
-// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ThemeModule } from './shared';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
     imports: [
@@ -38,7 +38,9 @@ import { CoreModule } from './shared';
             i18nEnabled: true,
             defaultI18nLang: 'en'
         }),
+        ThemeModule.forRoot(),
         CoreModule.forRoot(),
+        NgbModule.forRoot(),
         M3SharedModule.forRoot(),
         M3CoreModule,
         M3HomeModule,
