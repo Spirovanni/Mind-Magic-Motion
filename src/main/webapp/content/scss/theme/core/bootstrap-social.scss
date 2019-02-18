@@ -522,3 +522,30 @@ $bs-height-xs: (floor($font-size-sm * 1.2) + $padding-small-vertical + 1) !defau
 .btn-yahoo-flat:active:hover {
     @include btn-social-flat-active(#720e9e);
 }
+
+[dir='rtl'] {
+    .btn-social {
+        padding-right: ($bs-height-base + $padding-base-horizontal);
+        padding-left: auto;
+        text-align: right;
+
+        > :first-child {
+            right: 0;
+            left: auto;
+            border-left: 1px solid rgba(0, 0, 0, 0.2);
+            border-right: 0px;
+        }
+        &.btn-lg {
+            padding-right: ($bs-height-lg + $padding-large-horizontal);
+            padding-left: 0px;
+        }
+        &.btn-sm {
+            padding-right: ($bs-height-sm + $padding-small-horizontal);
+            padding-left: 0px;
+        }
+        &.btn-xs {
+            padding-right: ($bs-height-xs + $padding-small-horizontal);
+            padding-left: 0px;
+        }
+    }
+}

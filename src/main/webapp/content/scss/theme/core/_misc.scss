@@ -234,3 +234,41 @@ datetime .form-group {
         background-color: rgba(0, 0, 0, 0.6);
     }
 }
+
+[dir='rtl'] {
+    .fonticon-container {
+        > .fonticon-wrap {
+            float: right;
+            margin-left: 1rem;
+            margin-right: auto;
+        }
+    }
+
+    .langimg {
+        margin-left: 5px;
+        margin-right: auto;
+    }
+}
+
+//faq
+
+#faq {
+    .card {
+        .card-header {
+            padding: 0rem;
+            padding-top: 0.5rem;
+        }
+    }
+
+    ngb-accordion {
+        .card {
+            border-bottom: 2px solid #f5f7fa;
+        }
+    }
+
+    .btn-link {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

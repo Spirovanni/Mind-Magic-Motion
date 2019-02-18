@@ -152,3 +152,96 @@ $sideber-border: #e4e7ed;
         }
     }
 }
+
+[dir='rtl'] {
+    .chat-application {
+        .chat-sidebar {
+            border-left: 1px solid $sideber-border;
+            border-right: 0px;
+        }
+        .chat-fixed-search {
+            border-left: 1px solid $sideber-border;
+            border-right: 0px;
+        }
+
+        .chat-name {
+            margin-right: 300px;
+            margin-left: 0px;
+        }
+        .chat-app-window {
+            margin-right: 300px;
+            margin-left: 0px;
+        }
+        .chat-app-form {
+            margin-right: 300px;
+            margin-left: 0px;
+        }
+        .chats {
+            .chat-body {
+                margin: 10px 0 0 30px;
+                .chat-content {
+                    &:before {
+                        left: -10px;
+                        right: auto;
+                        border-right-color: theme-color('primary');
+                        border-left-color: transparent;
+                    }
+                    + .chat-content:before {
+                        border-color: transparent;
+                    }
+                    text-align: left;
+                    float: left;
+                    margin: 0 0 10px 20px;
+                }
+            }
+            .chat-avatar {
+                float: left;
+            }
+            .chat-left {
+                .chat-avatar {
+                    float: right;
+                }
+                .chat-body {
+                    margin-left: 0;
+                    margin-right: 30px;
+                }
+                .chat-content {
+                    &:before {
+                        left: auto;
+                        right: -10px;
+                        border-left-color: lighten($body-bg, 18%);
+                        border-right-color: transparent;
+                    }
+                    text-align: right;
+                    float: right;
+                    margin: 0 20px 10px 0;
+                }
+            }
+        }
+        .form-control-position {
+            &.control-position-right {
+                left: 18px;
+                right: auto;
+            }
+        }
+        @include media-breakpoint-down(sm) {
+            .chat-app-window {
+                height: calc(100% - 132px);
+                margin-left: auto;
+                margin-right: 0;
+            }
+            .chat-app-form {
+                margin-left: auto;
+                margin-right: 0;
+            }
+            .chat-name {
+                margin-left: auto;
+                margin-right: 0;
+            }
+            .chat-sidebar {
+                right: 0;
+                left: auto;
+            }
+        }
+    }
+}

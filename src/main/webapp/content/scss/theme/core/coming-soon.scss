@@ -27,3 +27,9 @@
 .clockFormat {
     border-radius: 60px;
 }
+
+[dir='rtl'] {
+    .clockCard {
+        float: right;
+    }
+}

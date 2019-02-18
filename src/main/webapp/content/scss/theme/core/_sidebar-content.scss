@@ -510,7 +510,8 @@
 }
 .main-panel {
     max-height: 100%;
-    height: 100%;
+    height: calc(100% - 85px);
+    min-height: calc(100% - 85px);
     width: 100%;
 }
 .sidebar-sm {
@@ -522,5 +523,180 @@
 .sidebar-lg {
     .app-sidebar {
         width: 280px;
+    }
+}
+
+.wrapper[dir='rtl'] {
+    &.nav-collapsed {
+        .navbar {
+            .navbar-header {
+                padding-right: 50px;
+                padding-left: auto;
+            }
+        }
+        .main-panel {
+            .main-content {
+                padding-right: 60px;
+                padding-left: auto;
+            }
+        }
+        footer {
+            padding-right: 60px;
+            padding-left: auto;
+        }
+    }
+}
+
+[dir='rtl'] {
+    .content-header {
+        text-align: right;
+    }
+    .content-sub-header {
+        text-align: right;
+    }
+
+    .wrapper {
+        &.nav-collapsed {
+            .navbar {
+                .navbar-header {
+                    padding-right: 50px;
+                    padding-left: auto;
+                }
+            }
+            .main-panel {
+                .main-content {
+                    padding-right: 60px;
+                    padding-left: auto;
+                }
+            }
+            footer {
+                padding-right: 60px;
+                padding-left: auto;
+            }
+        }
+    }
+
+    .bootstrap-navbar {
+        right: 0;
+        left: auto;
+    }
+    .app-sidebar,
+    .off-canvas-sidebar {
+        right: 0;
+        left: auto;
+        //transform: translate3d(0,0,0);
+
+        &.hide-sidebar {
+            transform: translate3d(100%, 0, 0);
+        }
+
+        .logo-img {
+            margin-left: 15px;
+            margin-right: auto;
+        }
+
+        .logo-tim {
+            float: right;
+        }
+
+        .navigation {
+            padding-right: 0;
+            padding-left: auto;
+
+            li {
+                &.has-sub {
+                    > a:after {
+                        left: 15px;
+                        right: auto;
+                    }
+                }
+
+                > a {
+                    padding: 10px 14px 10px 30px;
+                    margin: 5px 0;
+                    text-align: right;
+
+                    &:before {
+                        right: -100%;
+                        left: auto;
+                        border-left: solid 5px theme-color('danger');
+                        border-right: 0px;
+                    }
+                }
+
+                &.active > a {
+                    &:before {
+                        right: 0;
+                        left: auto;
+                    }
+                }
+
+                ul {
+                    li {
+                        a {
+                            padding: 8px 60px 8px 18px;
+                        }
+                        ul {
+                            li {
+                                a {
+                                    padding: 8px 70px 8px 18px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .badge.badge-pill {
+                left: 28px;
+                right: auto;
+            }
+
+            i {
+                float: right;
+                margin-left: 10px;
+                margin-right: auto;
+            }
+        }
+
+        .sidebar-background {
+            right: 0;
+            left: auto;
+        }
+
+        .logo {
+            p {
+                float: right;
+            }
+
+            .logo-text {
+                text-align: right;
+            }
+        }
+
+        .logo-tim {
+            float: right;
+        }
+
+        &:after,
+        &:before {
+            right: 0;
+            left: auto;
+        }
+    }
+
+    .sidebar-header {
+        a.nav-toggle {
+            left: 14px;
+            right: auto;
+        }
+        a.nav-close {
+            left: 14px;
+            right: auto;
+        }
+    }
+
+    .main-panel {
+        float: left;
     }
 }

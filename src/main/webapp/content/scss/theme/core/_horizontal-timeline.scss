@@ -176,7 +176,7 @@
         top: 25%;
         bottom: auto;
         right: auto;
-        //background: url("./../../../../../webapp/content/images/svg/cd-arrow.svg") no-repeat 0 0;
+        background: url(../../assets/img/svg/cd-arrow.svg) no-repeat 0 0;
     }
 
     &.prev {
@@ -336,5 +336,53 @@
         -ms-transform: translateX(0%); /* IE 9 */
         -webkit-transform: translateX(0%); /* Safari 3-8 */
         transform: translateX(0%);
+    }
+}
+
+[dir='rtl'] {
+    .cd-horizontal-timeline {
+        .events-wrapper {
+            &::before {
+                right: 0;
+                left: auto;
+            }
+            &::after {
+                left: 0;
+                right: auto;
+            }
+        }
+
+        .events {
+            right: 0;
+            left: auto;
+        }
+
+        .filling-line {
+            right: 0;
+            left: auto;
+        }
+    }
+
+    .cd-timeline-navigation a {
+        &::after {
+            /* arrow icon */
+            right: 25%;
+            left: auto;
+        }
+        &.prev {
+            right: 0;
+            left: auto;
+        }
+        &.next {
+            left: 0;
+            right: auto;
+        }
+    }
+
+    .cd-horizontal-timeline .events-content {
+        li {
+            right: 0;
+            left: auto;
+        }
     }
 }

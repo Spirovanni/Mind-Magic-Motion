@@ -75,11 +75,21 @@
             .border-bottom-#{$color_name} {
                 border-bottom-color: $color_value;
             }
-            .border-left-#{$color_name} {
-                border-left-color: $color_value;
+            [dir='ltr'] {
+                .border-left-#{$color_name} {
+                    border-left-color: $color_value;
+                }
+                .border-right-#{$color_name} {
+                    border-right-color: $color_value;
+                }
             }
-            .border-right-#{$color_name} {
-                border-right-color: $color_value;
+            [dir='rtl'] {
+                .border-left-#{$color_name} {
+                    border-right-color: $color_value;
+                }
+                .border-right-#{$color_name} {
+                    border-left-color: $color_value;
+                }
             }
 
             .badge-#{$color_name} {
@@ -230,11 +240,21 @@
             .border-bottom-#{$color_name}.border-bottom-#{$color_type} {
                 border-bottom: 1px solid $color_value !important;
             }
-            .border-left-#{$color_name}.border-left-#{$color_type} {
-                border-left: 1px solid $color_value !important;
+            [dir='ltr'] {
+                .border-left-#{$color_name}.border-left-#{$color_type} {
+                    border-left: 1px solid $color_value !important;
+                }
+                .border-right-#{$color_name}.border-right-#{$color_type} {
+                    border-right: 1px solid $color_value !important;
+                }
             }
-            .border-right-#{$color_name}.border-right-#{$color_type} {
-                border-right: 1px solid $color_value !important;
+            [dir='rtl'] {
+                .border-left-#{$color_name}.border-left-#{$color_type} {
+                    border-right: 1px solid $color_value !important;
+                }
+                .border-right-#{$color_name}.border-right-#{$color_type} {
+                    border-left: 1px solid $color_value !important;
+                }
             }
             .overlay-#{$color_name}.overlay-#{$color_type} {
                 @include bg-opacity($color_value, 0.8);
@@ -264,10 +284,20 @@
     .border-bottom-#{$color} {
         border-bottom: 1px solid $color_value;
     }
-    .border-left-#{$color} {
-        border-left: 1px solid $color_value;
+    [dir='ltr'] {
+        .border-left-#{$color} {
+            border-left: 1px solid $color_value;
+        }
+        .border-right-#{$color} {
+            border-right: 1px solid $color_value;
+        }
     }
-    .border-right-#{$color} {
-        border-right: 1px solid $color_value;
+    [dir='rtl'] {
+        .border-left-#{$color} {
+            border-right: 1px solid $color_value;
+        }
+        .border-right-#{$color} {
+            border-left: 1px solid $color_value;
+        }
     }
 }

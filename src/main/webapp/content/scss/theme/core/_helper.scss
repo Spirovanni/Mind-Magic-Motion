@@ -600,3 +600,86 @@
     width: 32px !important;
     height: 32px !important;
 }
+
+[dir='rtl'] {
+    .position-right-0 {
+        right: auto;
+        left: 0;
+    }
+
+    .position-left-0 {
+        left: auto;
+        right: 0;
+    }
+
+    .no-edge-left {
+        right: 0 !important;
+        left: auto !important;
+    }
+    .no-edge-right {
+        left: 0 !important;
+        right: auto !important;
+    }
+
+    .list-style-icons {
+        padding-left: auto;
+        padding-right: 10px;
+        margin-right: 0;
+        margin-left: auto;
+        > li i {
+            float: right;
+            margin: 5px 0 0 12px;
+        }
+    }
+
+    // Borders
+    // -------------------------
+
+    // Add borders
+    .border-left {
+        border-right: 1px solid;
+    }
+    .border-right {
+        border-left: 1px solid;
+    }
+
+    .border-left-2 {
+        border-right-width: 2px !important;
+    }
+    .border-right-2 {
+        border-left-width: 2px !important;
+    }
+
+    // Large - 3px
+
+    .border-left-3 {
+        border-right-width: 3px !important;
+    }
+    .border-right-3 {
+        border-left-width: 3px !important;
+    }
+
+    // Remove borders
+
+    .no-border-left {
+        border-right: 0 !important;
+    }
+    .no-border-right {
+        border-left: 0 !important;
+    }
+
+    // No border radious
+
+    .no-border-top-left-radius {
+        border-top-right-radius: 0 !important;
+    }
+    .no-border-top-right-radius {
+        border-top-left-radius: 0 !important;
+    }
+    .no-border-bottom-left-radius {
+        border-bottom-right-radius: 0 !important;
+    }
+    .no-border-bottom-right-radius {
+        border-bottom-left-radius: 0 !important;
+    }
+}

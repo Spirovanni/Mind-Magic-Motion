@@ -158,3 +158,25 @@ ngb-accordion {
         background-color: theme-color('danger') !important;
     }
 }
+
+[dir='rtl'] {
+    .media {
+        img,
+        iframe {
+            margin-left: 1rem !important;
+            margin-right: auto !important;
+        }
+        .media-body + a {
+            img {
+                margin-left: 0 !important;
+                margin-right: 1rem;
+            }
+        }
+        .media-body.text-right + a {
+            img {
+                margin-right: 0;
+                margin-left: auto;
+            }
+        }
+    }
+}

@@ -172,3 +172,53 @@ $sideber-width: 500px;
         }
     }
 }
+
+[dir='rtl'] {
+    .email-application {
+        .email-app-sidebar {
+            border-left: 1px solid $sideber-border;
+            border-right: 0px;
+        }
+
+        .email-app-mail-content {
+            float: right;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        .email-app-list-mails {
+            border-left: 1px solid #e6ecf5;
+            float: right;
+            border-right: 0px;
+        }
+    }
+    @include media-breakpoint-between(md, lg) {
+        .email-app-list-mails {
+            border-left: 1px solid #e6ecf5;
+            float: right;
+            border-right: 0px;
+        }
+    }
+    @include media-breakpoint-up(xl) {
+        .email-app-content {
+            margin-right: 250px;
+            margin-left: 0px;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        .email-app-mail-content {
+            right: 15px !important;
+            left: auto;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        .email-application {
+            .email-app-sidebar {
+                right: 0;
+                left: auto;
+            }
+        }
+    }
+}
