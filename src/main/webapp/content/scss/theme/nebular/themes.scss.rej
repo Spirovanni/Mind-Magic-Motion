@@ -1,0 +1,10 @@
+diff a/src/main/webapp/content/scss/theme/nebular/themes.scss b/src/main/webapp/content/scss/theme/nebular/themes.scss	(rejected hunks)
+@@ -15 +11 @@ $nb-themes: nb-register-theme(
+-        / / app wise variables for each theme sidebar-header-gap: 2rem,
++        // app wise variables for each theme sidebar-header-gap: 2rem,
+@@ -41 +37 @@ $nb-themes: nb-register-theme(
+-        / / app wise variables for each theme sidebar-header-gap: 2rem,
++        // app wise variables for each theme sidebar-header-gap: 2rem,
+@@ -67 +63 @@ $nb-themes: nb-register-theme(
+-        / / app wise variables for each theme sidebar-header-gap: 2rem,
++        // app wise variables for each theme sidebar-header-gap: 2rem,
