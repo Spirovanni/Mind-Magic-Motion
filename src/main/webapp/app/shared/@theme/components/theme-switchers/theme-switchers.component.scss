@@ -1,0 +1,69 @@
+@import '../../../../../content/scss/theme/nebular/themes';
+@import '~@nebular/theme/styles/core/mixins';
+@import '~@nebular/theme/styles/core/functions';
+
+@include nb-install-component() {
+    .themes-switchers {
+        box-sizing: border-box;
+        //outline-color: #0f6ab4;
+        //line-height: 1.5rem;
+        border-top-left-radius: nb-theme(btn-border-radius);
+        border-top-right-radius: nb-theme(btn-border-radius);
+        border-bottom-left-radius: nb-theme(btn-border-radius);
+        border-bottom-right-radius: nb-theme(btn-border-radius);
+        list-style-type: none;
+        margin-top: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in;
+        border: none;
+        width: 100%;
+        color: nb-theme(color-fg-highlight);
+        min-width: 180px;
+        display: flex;
+        font-size: 1.25rem;
+        text-align: center;
+        font-weight: bolder;
+        //padding: 0.8rem 1.25rem;
+        align-items: center;
+        cursor: pointer;
+        background-color: nb-theme(switcher-background);
+
+        nb-popover {
+            color: nb-theme(color-primary);
+        }
+
+        &:hover {
+            $color: nb-theme(switcher-background);
+            $percentage: nb-theme(switcher-background-percentage);
+            background-color: tint($color, $percentage);
+        }
+
+        span {
+            margin: 1rem 2.2rem;
+            color: nb-theme(color-primary);
+        }
+
+        i {
+            color: nb-theme(color-primary);
+            font-size: 1.8rem;
+            margin: 0.5rem 1.2rem;
+            border-radius: 50%;
+            position: relative;
+
+            @include nb-for-theme(default) {
+                color: nb-theme(color-success);
+            }
+
+            @include nb-for-theme(corporate) {
+                color: nb-theme(color-fg-highlight);
+            }
+
+            &::before {
+                // Hack for IE11, IE11 should not set background
+                background: nb-theme(drops-icon-line-gadient);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+}

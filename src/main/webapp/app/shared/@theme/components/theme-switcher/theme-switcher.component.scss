@@ -1,0 +1,121 @@
+@import '../../../../../content/scss/theme/nebular/themes';
+@import '~@nebular/theme/styles/global/bootstrap/hero-buttons';
+@import '~bootstrap/scss/mixins/breakpoints';
+@import '~@nebular/theme/styles/global/bootstrap/breakpoints';
+
+@include nb-install-component() {
+    display: flex;
+    height: 5px;
+    flex-direction: column;
+    align-items: center;
+    width: 15%;
+
+    .theme-switch {
+        display: flex;
+        height: 5px;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        margin: 0;
+
+        & > span {
+            font-size: 1.125rem;
+            font-weight: nb-theme(font-weight-bold);
+            transition: opacity 0.3s ease;
+
+            &.light {
+                color: nb-theme(color-fg-text);
+                padding-right: 10px;
+            }
+
+            &.corporate {
+                color: nb-theme(color-fg);
+                padding-left: 10px;
+            }
+
+            @include nb-for-theme(corporate) {
+                &.light {
+                    color: nb-theme(color-fg);
+                }
+
+                &.corporate {
+                    color: nb-theme(color-white);
+                }
+            }
+
+            &:active {
+                opacity: 0.78;
+            }
+        }
+    }
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 4rem;
+        height: 1.75rem;
+        margin: 0;
+
+        input {
+            display: none;
+
+            &:checked + .slider::before {
+                transform: translateX(2.25rem);
+            }
+        }
+
+        .slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 1.75rem;
+            background-color: nb-theme(layout-bg);
+        }
+
+        .slider::before {
+            position: absolute;
+            content: '';
+            height: 1.75rem;
+            width: 1.75rem;
+            border-radius: 50%;
+            background-color: nb-theme(color-success);
+            transition: 0.2s;
+
+            box-shadow: 0 0 0.25rem 0 rgba(nb-theme(color-fg), 0.4);
+
+            @include nb-for-theme(corporate) {
+                @include btn-hero-primary-gradient();
+            }
+        }
+
+        .checkbox {
+            height: 1rem;
+            width: 1rem;
+        }
+
+        .switch .slider {
+            position: absolute;
+            content: '';
+            height: 1rem;
+            width: 1rem;
+            border-radius: 50%;
+            background-color: #5dcfe3;
+            transition: 0.2s;
+            box-shadow: 0 0 0.25rem 0 rgba(164, 171, 179, 0.4);
+            background-image: linear-gradient(to right, #73a1ff, #73a1ff);
+        }
+    }
+
+    @include media-breakpoint-down(is) {
+        .light,
+        .corporate {
+            display: none;
+        }
+    }
+
+    @include media-breakpoint-down(xs) {
+        align-items: flex-end;
+    }
+}
