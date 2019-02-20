@@ -98,6 +98,7 @@
                 line-height: 56px;
             }
         }
+
         &.halfway-fab {
             position: absolute;
             right: 24px;
@@ -215,6 +216,28 @@
             &:-moz-placeholder {
                 color: #fff;
             }
+        }
+    }
+}
+
+[dir='rtl'] {
+    .card {
+        text-align: right;
+        .card-img {
+            .card-title {
+                right: 0;
+                left: auto;
+            }
+        }
+        .btn-floating {
+            &.halfway-fab {
+                left: 24px;
+                right: auto;
+            }
+        }
+        .card-reveal {
+            right: 0;
+            left: auto;
         }
     }
 }
