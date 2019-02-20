@@ -171,3 +171,18 @@ h2.title {
 .text-highlight {
     padding: 4px 6px;
 }
+
+[dir='rtl'] {
+    .float-left {
+        float: right !important;
+    }
+    .float-right {
+        float: left !important;
+    }
+    .text-right {
+        text-align: left !important;
+    }
+    .text-left {
+        text-align: right !important;
+    }
+}
