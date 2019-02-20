@@ -270,3 +270,100 @@ select.form-control-xl:not([size]):not([multiple]) {
 .ng-touched.ng-invalid {
     border-color: theme-color('danger');
 }
+
+[dir='rtl'] {
+    form {
+        .form-control-position {
+            left: 0;
+            right: auto;
+        }
+        .has-icon-left {
+            .form-control-position {
+                left: auto;
+                right: inherit;
+            }
+            .form-control {
+                padding-left: 0.85rem;
+                padding-right: 2.95rem;
+            }
+        }
+        .has-icon-right {
+            .form-control {
+                padding-left: 2.5rem;
+                padding-right: auto;
+            }
+        }
+
+        .form-actions {
+            &.right {
+                text-align: left;
+            }
+
+            @include media-breakpoint-down(sm) {
+                .buttons-group {
+                    float: right !important;
+                }
+            }
+        }
+
+        &.form-horizontal {
+            .form-group {
+                @include media-breakpoint-up(sm) {
+                    .label-control {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+
+        &.row-separator {
+            .form-group {
+                > div {
+                    padding-left: 0;
+                    padding-right: auto;
+                }
+            }
+        }
+
+        &.form-bordered {
+            .form-group {
+                > div {
+                    padding-left: 0;
+                    padding-right: auto;
+                    border-right: 1px solid darken($body-bg, 3%);
+                }
+            }
+        }
+
+        &.striped-rows {
+            .form-group {
+                > div {
+                    padding-left: 0;
+                    padding-right: auto;
+                }
+            }
+        }
+
+        &.striped-labels {
+            .form-group {
+                > div {
+                    padding-left: 0;
+                    padding-right: auto;
+                }
+            }
+        }
+    }
+
+    .custom-control-indicator {
+        + .custom-control-description {
+            margin-right: 1rem;
+            margin-left: auto;
+        }
+    }
+
+    .input-group-addon input[type='radio'],
+    .input-group-addon input[type='checkbox'] {
+        margin-right: -1rem;
+        margin-left: auto;
+    }
+}
