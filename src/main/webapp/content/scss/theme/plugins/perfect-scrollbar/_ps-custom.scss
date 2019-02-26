@@ -52,6 +52,7 @@ $ps-scrollbar-y-width: 8px !default;
         )
     );
 }
+
 .ps-theme-light {
     @include ps-container(
         map-merge(
@@ -73,6 +74,7 @@ $ps-scrollbar-y-width: 8px !default;
         )
     );
 }
+
 .menu-collapsed {
     .ps-theme-dark {
         @include ps-container(
@@ -117,11 +119,13 @@ $ps-scrollbar-y-width: 8px !default;
         );
     }
 }
+
 /* to make scrollbars always visible */
 .always-visible.ps-container > .ps-scrollbar-x-rail,
 .always-visible.ps-container > .ps-scrollbar-y-rail {
     opacity: $ps-rail-container-hover-opacity;
 }
+
 .large-margin.ps-container > .ps-scrollbar-x-rail {
     margin: 0 25%;
 }
