@@ -132,56 +132,77 @@
     .#{$ct-class-label} {
         @include ct-chart-label($ct-text-color, $ct-text-size);
     }
+
     .#{$ct-class-chart-line} .#{$ct-class-label},
     .#{$ct-class-chart-bar} .#{$ct-class-label} {
         @include ct-flex();
     }
+
     .#{$ct-class-label}.#{$ct-class-horizontal}.#{$ct-class-start} {
-        @include ct-align-justify(flex-end, flex-start); // Fallback for browsers that don't support foreignObjects
+        @include ct-align-justify(flex-end, flex-start);
+        // Fallback for browsers that don't support foreignObjects
         text-anchor: start;
     }
+
     .#{$ct-class-label}.#{$ct-class-horizontal}.#{$ct-class-end} {
-        @include ct-align-justify(flex-start, flex-start); // Fallback for browsers that don't support foreignObjects
+        @include ct-align-justify(flex-start, flex-start);
+        // Fallback for browsers that don't support foreignObjects
         text-anchor: start;
     }
+
     .#{$ct-class-label}.#{$ct-class-vertical}.#{$ct-class-start} {
-        @include ct-align-justify(flex-end, flex-end); // Fallback for browsers that don't support foreignObjects
+        @include ct-align-justify(flex-end, flex-end);
+        // Fallback for browsers that don't support foreignObjects
         text-anchor: end;
     }
+
     .#{$ct-class-label}.#{$ct-class-vertical}.#{$ct-class-end} {
-        @include ct-align-justify(flex-end, flex-start); // Fallback for browsers that don't support foreignObjects
+        @include ct-align-justify(flex-end, flex-start);
+        // Fallback for browsers that don't support foreignObjects
         text-anchor: start;
     }
+
     .#{$ct-class-chart-bar} .#{$ct-class-label}.#{$ct-class-horizontal}.#{$ct-class-start} {
-        @include ct-align-justify(flex-end, center); // Fallback for browsers that don't support foreignObjects
+        @include ct-align-justify(flex-end, center);
+        // Fallback for browsers that don't support foreignObjects
         text-anchor: start;
     }
+
     .#{$ct-class-chart-bar} .#{$ct-class-label}.#{$ct-class-horizontal}.#{$ct-class-end} {
-        @include ct-align-justify(flex-start, center); // Fallback for browsers that don't support foreignObjects
+        @include ct-align-justify(flex-start, center);
+        // Fallback for browsers that don't support foreignObjects
         text-anchor: start;
     }
+
     .#{$ct-class-chart-bar}.#{$ct-class-horizontal-bars} .#{$ct-class-label}.#{$ct-class-horizontal}.#{$ct-class-start} {
-        @include ct-align-justify(flex-end, flex-start); // Fallback for browsers that don't support foreignObjects
+        @include ct-align-justify(flex-end, flex-start);
+        // Fallback for browsers that don't support foreignObjects
         text-anchor: start;
     }
+
     .#{$ct-class-chart-bar}.#{$ct-class-horizontal-bars} .#{$ct-class-label}.#{$ct-class-horizontal}.#{$ct-class-end} {
-        @include ct-align-justify(flex-start, flex-start); // Fallback for browsers that don't support foreignObjects
+        @include ct-align-justify(flex-start, flex-start);
+        // Fallback for browsers that don't support foreignObjects
         text-anchor: start;
     }
+
     .#{$ct-class-chart-bar}.#{$ct-class-horizontal-bars} .#{$ct-class-label}.#{$ct-class-vertical}.#{$ct-class-start} {
-        // @include ct-chart-label($ct-text-color, $ct-text-size, center, $ct-vertical-text-justify);
+        //@include ct-chart-label($ct-text-color, $ct-text-size, center, $ct-vertical-text-justify);
         @include ct-align-justify(center, flex-end);
         // Fallback for browsers that don't support foreignObjects
         text-anchor: end;
     }
+
     .#{$ct-class-chart-bar}.#{$ct-class-horizontal-bars} .#{$ct-class-label}.#{$ct-class-vertical}.#{$ct-class-end} {
         @include ct-align-justify(center, flex-start);
         // Fallback for browsers that don't support foreignObjects
         text-anchor: end;
     }
+
     .#{$ct-class-grid} {
         @include ct-chart-grid($ct-grid-color, $ct-grid-width, $ct-grid-dasharray);
     }
+
     .#{$ct-class-point} {
         @include ct-chart-point($ct-point-size, $ct-point-shape);
     }
@@ -189,34 +210,42 @@
     .#{$ct-class-line} {
         @include ct-chart-line($ct-line-width);
     }
+
     .#{$ct-class-area} {
         @include ct-chart-area();
     }
+
     .#{$ct-class-bar} {
         @include ct-chart-bar($ct-bar-width);
     }
+
     .#{$ct-class-slice-donut} {
         @include ct-chart-donut($ct-donut-width);
     }
+
     @if $ct-include-colored-series {
         @for $i from 0 to length($ct-series-names) {
             .#{$ct-class-series}-#{nth($ct-series-names, $i + 1)} {
                 $color: nth($ct-series-colors, $i + 1);
+
                 @include ct-chart-series-color($color);
             }
         }
     }
 }
-//@if $ct-include-classes {
-//    @include ct-chart();
-//    @if $ct-include-alternative-responsive-containers {
-//        @for $i from 0 to length($ct-scales-names) {
-//            .#{nth($ct-scales-names, $i + 1)} {
-//                @include ct-responsive-svg-container($ratio: nth($ct-scales, $i + 1));
-//            }
-//        }
-//    }
-//}
+
+@if $ct-include-classes {
+    @include ct-chart();
+
+    @if $ct-include-alternative-responsive-containers {
+        @for $i from 0 to length($ct-scales-names) {
+            .#{nth($ct-scales-names, $i + 1)} {
+                @include ct-responsive-svg-container($ratio: nth($ct-scales, $i + 1));
+            }
+        }
+    }
+}
+
 .ct-blue {
     stroke: theme-color('primary') !important;
 }
