@@ -84,3 +84,24 @@ bootstrap table theme
         }
     }
 }
+
+[dir='rtl'] {
+    .ngx-datatable .datatable-header .datatable-header-cell {
+        text-align: right;
+    }
+    .ngx-datatable .datatable-body .datatable-body-row .datatable-body-cell {
+        text-align: right;
+    }
+    .ngx-datatable .empty-row {
+        text-align: right;
+    }
+    .ngx-datatable .loading-row {
+        text-align: right;
+    }
+    .ngx-datatable .datatable-footer .datatable-pager {
+        text-align: left;
+    }
+    .ngx-datatable.scroll-horz .datatable-body {
+        padding-right: 20px;
+    }
+}
