@@ -23,6 +23,7 @@ import * as moment from 'moment';
 import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent, ActiveMenuDirective, ErrorComponent } from './layouts';
 
 import { StoreModule } from '@ngrx/store';
+import { DragulaModule } from 'ng2-dragula';
 import { CoreModule } from './shared';
 import { ThemeModule } from './shared';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -43,6 +44,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
         CoreModule.forRoot(),
         NgbModule.forRoot(),
         M3SharedModule.forRoot(),
+        DragulaModule.forRoot(),
         StoreModule.forRoot({}),
         M3CoreModule,
         M3HomeModule,
