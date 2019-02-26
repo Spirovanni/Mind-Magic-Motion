@@ -113,3 +113,15 @@
         }
     }
 }
+
+.ps-scrollbar-y-rail {
+    right: 3px !important;
+    left: auto !important;
+}
+
+[dir='rtl'] {
+    .ps-scrollbar-y-rail {
+        left: 3px !important;
+        right: auto !important;
+    }
+}
