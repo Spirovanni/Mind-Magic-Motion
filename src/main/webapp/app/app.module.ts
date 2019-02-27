@@ -28,6 +28,8 @@ import { CoreModule } from './shared';
 import { ThemeModule } from './shared';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+import * as $ from 'jquery';
+
 @NgModule({
     imports: [
         BrowserModule,
