@@ -1,5 +1,6 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -47,7 +48,7 @@ import { DEFAULT_THEME } from './../../../content/scss/theme/nebular/theme.defau
 import { COSMIC_THEME } from './../../../content/scss/theme/nebular/theme.cosmic';
 import { CORPORATE_THEME } from './../../../content/scss/theme/nebular/theme.corporate';
 
-const BASE_MODULES = [CommonModule, FormsModule, ReactiveFormsModule];
+const BASE_MODULES = [CommonModule, FormsModule, ReactiveFormsModule, BrowserAnimationsModule];
 
 const NB_MODULES = [
     NbCardModule,
