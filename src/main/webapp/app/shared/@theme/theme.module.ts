@@ -33,7 +33,7 @@ import {
 
 import { CapitalizePipe, PluralPipe, RoundPipe, TimingPipe } from './pipes';
 
-import { OneColumnLayoutComponent, ThreeColumnsLayoutComponent, TwoColumnsLayoutComponent } from './layouts';
+import { OneColumnLayoutComponent, ThreeColumnsLayoutComponent, TwoColumnsLayoutComponent, ContentLayoutComponent } from './layouts';
 
 const PIPES = [CapitalizePipe, PluralPipe, RoundPipe, TimingPipe];
 
@@ -70,7 +70,8 @@ const COMPONENTS = [
     TinyMCEComponent,
     OneColumnLayoutComponent,
     ThreeColumnsLayoutComponent,
-    TwoColumnsLayoutComponent
+    TwoColumnsLayoutComponent,
+    ContentLayoutComponent
 ];
 
 const ENTRY_COMPONENTS = [ThemeSwitchersListComponent];
