@@ -1,6 +1,6 @@
 {
     "home": {
-        "title": "Welcome, Java Hipster!",
+        "title": "Welcome the Home of Blackshields!",
         "subtitle": "This is your homepage",
         "logged": {
             "message": "Welcome home \"{{username}}\"."
