@@ -1,4 +1,4 @@
-import { ICompletedClassMySuffix } from 'app/shared/model//completed-class-my-suffix.model';
+import { ICompletedClassMySuffix } from 'app/shared/models/completed-class-my-suffix.model';
 
 export interface ISchoolMySuffix {
     id?: number;
