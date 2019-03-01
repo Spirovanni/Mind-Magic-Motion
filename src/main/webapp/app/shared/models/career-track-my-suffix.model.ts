@@ -1,4 +1,4 @@
-import { ITaskMySuffix } from 'app/shared/model//task-my-suffix.model';
+import { ITaskMySuffix } from 'app/shared/models//task-my-suffix.model';
 
 export interface ICareerTrackMySuffix {
     id?: number;
