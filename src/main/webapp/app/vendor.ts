@@ -6,6 +6,27 @@ import '../content/scss/vendor.scss';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
+    faAdjust,
+    faChartBar,
+    faChartArea,
+    faPiggyBank,
+    faArchive,
+    faBuilding,
+    faBeer,
+    faAnchor,
+    faAtom,
+    faAirFreshener,
+    faAtlas,
+    faChalkboardTeacher,
+    faCompass,
+    faChessKnight,
+    faChessBishop,
+    faChess,
+    faChessBoard,
+    faChessKing,
+    faChessPawn,
+    faChessQueen,
+    faChessRook,
     faUser,
     faSort,
     faSortUp,
@@ -43,6 +64,27 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 // Adds the SVG icon to the library so you can use it in your page
+library.add(faAdjust);
+library.add(faChartBar);
+library.add(faChartArea);
+library.add(faPiggyBank);
+library.add(faArchive);
+library.add(faBuilding);
+library.add(faBeer);
+library.add(faAnchor);
+library.add(faAtom);
+library.add(faAirFreshener);
+library.add(faAtlas);
+library.add(faChalkboardTeacher);
+library.add(faCompass);
+library.add(faChessKnight);
+library.add(faChessBishop);
+library.add(faChess);
+library.add(faChessBoard);
+library.add(faChessKing);
+library.add(faChessPawn);
+library.add(faChessQueen);
+library.add(faChessRook);
 library.add(faUser);
 library.add(faSort);
 library.add(faSortUp);
