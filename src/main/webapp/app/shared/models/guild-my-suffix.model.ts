@@ -1,4 +1,4 @@
-import { IPlayerMySuffix } from 'app/shared/model//player-my-suffix.model';
+import { IPlayerMySuffix } from 'app/shared/models/player-my-suffix.model';
 
 export interface IGuildMySuffix {
     id?: number;
