@@ -36,6 +36,7 @@
         },
         "form": {
             "username": "Username",
+            "playername": "Playername",
             "username.placeholder": "Your username",
             "currentpassword": "Current password",
             "currentpassword.placeholder": "Current password",
