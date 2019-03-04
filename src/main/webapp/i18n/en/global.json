@@ -51,7 +51,7 @@
             "info": {
                 "authenticated": {
                     "prefix": "If you feel like ",
-                    "link": "sign in",
+                    "link": "sign in2",
                     "suffix": ", you can try the default accounts:<br/>- Administrator (login=\"admin\" and password=\"admin\") <br/>- User (login=\"user\" and password=\"user\")."
                 },
                 "register": {
