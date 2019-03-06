@@ -50,6 +50,8 @@ export class NavbarComponent implements OnInit {
     }
 
     ngOnInit() {
+        this.userService.getUsers().subscribe((users: any) => (this.user = users.xavierm));
+
         this.languageHelper.getAll().then(languages => {
             this.languages = languages;
         });
