@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { JhiLanguageService } from 'ng-jhipster';
+import { AnalyticsService } from '../../shared/@core/utils/analytics.service';
 import { SessionStorageService } from 'ngx-webstorage';
 
 import { NbMenuService, NbSidebarService, NbMenuItem } from '@nebular/theme';
