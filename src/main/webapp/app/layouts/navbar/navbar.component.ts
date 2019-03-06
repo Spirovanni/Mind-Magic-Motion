@@ -11,6 +11,7 @@ import { NbMenuService, NbSidebarService, NbMenuItem } from '@nebular/theme';
 import { VERSION } from 'app/app.constants';
 import { JhiLanguageHelper, AccountService, LoginModalService, LoginService } from 'app/core';
 import { ProfileService } from 'app/layouts/profiles/profile.service';
+import { JhiEventManager } from 'ng-jhipster';
 
 @Component({
     selector: 'jhi-navbar',
@@ -61,10 +62,24 @@ export class NavbarComponent implements OnInit {
             this.swaggerEnabled = profileInfo.swaggerEnabled;
         });
 
-        this.principal.identity().then(account => {
-            this.account = account;
-        });
-        this.registerAuthenticationSuccess();
+        // this.principal.identity().then(account => {
+        //     this.account = account;
+        // });
+        // this.registerAuthenticationSuccess();
+    }
+
+    toggleSidebar(): boolean {
+        this.sidebarService.toggle(true, 'menu-sidebar');
+        return false;
+    }
+
+    toggleSettings(): boolean {
+        this.sidebarService.toggle(false, 'settings-sidebar');
+        return false;
+    }
+
+    startSearch() {
+        this.analyticsService.trackEvent('startSearch');
     }
 
     changeLanguage(languageKey: string) {
@@ -97,4 +112,12 @@ export class NavbarComponent implements OnInit {
     getImageUrl() {
         return this.isAuthenticated() ? this.accountService.getImageUrl() : null;
     }
+
+    // registerAuthenticationSuccess() {
+    //     this.eventManager.subscribe('authenticationSuccess', message => {
+    //         this.principal.identity().then(account => {
+    //             this.account = account;
+    //         });
+    //     });
+    // }
 }
