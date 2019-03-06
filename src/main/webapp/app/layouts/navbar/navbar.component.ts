@@ -5,6 +5,8 @@ import { JhiLanguageService } from 'ng-jhipster';
 import { AnalyticsService } from '../../shared/@core/utils/analytics.service';
 import { SessionStorageService } from 'ngx-webstorage';
 
+import { UserService } from '../../shared/@core/data/users.service';
+
 import { NbMenuService, NbSidebarService, NbMenuItem } from '@nebular/theme';
 import { VERSION } from 'app/app.constants';
 import { JhiLanguageHelper, AccountService, LoginModalService, LoginService } from 'app/core';
