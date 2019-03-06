@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { JhiLanguageService } from 'ng-jhipster';
@@ -18,6 +18,11 @@ import { ProfileService } from 'app/layouts/profiles/profile.service';
     styleUrls: ['navbar.scss']
 })
 export class NavbarComponent implements OnInit {
+    @Input() position = 'normal';
+
+    account: Account;
+    user: any;
+
     inProduction: boolean;
     isNavbarCollapsed: boolean;
     languages: any[];
@@ -33,7 +38,12 @@ export class NavbarComponent implements OnInit {
         private accountService: AccountService,
         private loginModalService: LoginModalService,
         private profileService: ProfileService,
-        private router: Router
+        private router: Router,
+        private sidebarService: NbSidebarService,
+        private menuService: NbMenuService,
+        private userService: UserService,
+        private analyticsService: AnalyticsService,
+        private eventManager: JhiEventManager
     ) {
         this.version = VERSION ? 'v' + VERSION : '';
         this.isNavbarCollapsed = true;
