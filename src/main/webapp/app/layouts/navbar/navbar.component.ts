@@ -60,6 +60,11 @@ export class NavbarComponent implements OnInit {
             this.inProduction = profileInfo.inProduction;
             this.swaggerEnabled = profileInfo.swaggerEnabled;
         });
+
+        this.principal.identity().then(account => {
+            this.account = account;
+        });
+        this.registerAuthenticationSuccess();
     }
 
     changeLanguage(languageKey: string) {
