@@ -1,4 +1,6 @@
-<nav class="navbar navbar-dark navbar-expand-md bg-dark">
+<nav class="header-container navbar-dark navbar-expand-md jh-navbar"
+     [class.left]="position === 'normal'"
+     [class.right]="position === 'inverse'">
     <a class="navbar-brand logo" routerLink="/" (click)="collapseNavbar()">
         <span class="logo-img"></span>
         <span jhiTranslate="global.title" class="navbar-title">M3</span> <span class="navbar-version">{{version}}</span>
