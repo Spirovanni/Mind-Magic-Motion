@@ -2,15 +2,9 @@
 @import '~bootstrap/scss/mixins/breakpoints';
 @import '~@nebular/theme/styles/global/breakpoints';
 @import '../../../content/scss/theme/mixins';
-@import '~bootstrap/scss/functions';
-@import '~bootstrap/scss/variables';
 
 /* ==========================================================================
 Navbar
-========================================================================== */
-
-/* ==========================================================================
-Nebular Style
 ========================================================================== */
 
 @include nb-install-component() {
@@ -65,40 +59,40 @@ Nebular Style
         }
     }
 
-    //.toggle-layout /deep/ a {
-    //    display: block;
-    //    text-decoration: none;
-    //    line-height: 1;
-    //
-    //    i {
-    //        color: nb-theme(color-fg-highlight);
-    //        font-size: 2.25rem;
-    //        border-radius: 50%;
-    //        position: relative;
-    //        animation-name: pulse-light;
-    //
-    //        &::after {
-    //            content: ' ';
-    //            // hack to be able to set border-radius
-    //            background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7');
-    //            border-radius: 50%;
-    //            pointer-events: none;
-    //
-    //            position: absolute;
-    //            top: 52.3%;
-    //            left: 50%;
-    //            transform: translate(-50%, -50%);
-    //            width: 13%;
-    //            height: 13%;
-    //
-    //            animation: 3s linear infinite pulse;
-    //
-    //            @include nb-for-theme(default) {
-    //                animation-name: pulse-light;
-    //            }
-    //        }
-    //    }
-    //}
+    .toggle-layout /deep/ a {
+        display: block;
+        text-decoration: none;
+        line-height: 1;
+
+        i {
+            color: nb-theme(color-fg-highlight);
+            font-size: 2.25rem;
+            border-radius: 50%;
+            position: relative;
+            animation-name: pulse-light;
+
+            &::after {
+                content: ' ';
+                // hack to be able to set border-radius
+                background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7');
+                border-radius: 50%;
+                pointer-events: none;
+
+                position: absolute;
+                top: 52.3%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 13%;
+                height: 13%;
+
+                animation: 3s linear infinite pulse;
+
+                @include nb-for-theme(default) {
+                    animation-name: pulse-light;
+                }
+            }
+        }
+    }
 
     @include keyframes(pulse) {
         0% {
@@ -138,11 +132,11 @@ Nebular Style
         }
     }
 
-    //@include media-breakpoint-down(sm) {
-    //    nb-user /deep/ .user-name {
-    //        display: none;
-    //    }
-    //}
+    @include media-breakpoint-down(sm) {
+        nb-user /deep/ .user-name {
+            display: none;
+        }
+    }
 
     @include media-breakpoint-down(is) {
         .header-container {
@@ -160,11 +154,11 @@ Nebular Style
         }
     }
 
-    //@include media-breakpoint-down(xs) {
-    //    .right /deep/ {
-    //        display: none;
-    //    }
-    //}
+    @include media-breakpoint-down(xs) {
+        .right /deep/ {
+            display: none;
+        }
+    }
 }
 
 /* ==========================================================================
@@ -172,36 +166,238 @@ JHipster Default Style
 ========================================================================== */
 
 .navbar-version {
-    font-size: 0.65em;
-    color: $navbar-dark-color;
+    font-size: 10px;
+    color: #ccc;
 }
 
-.profile-image {
-    height: 1.75em;
-    width: 1.75em;
+.login {
+    font-size: 15px;
+    margin-left: 3px;
 }
 
-.navbar {
-    padding: 0.2rem 1rem;
+.jh-navbar {
+    padding: 0.01em 1em;
+    display: inline;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    .profile-image {
+        margin: 0 0;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background: #ffffff;
+        border: solid 2px #bcc3cc;
+    }
     .dropdown-item.active,
     .dropdown-item.active:focus,
     .dropdown-item.active:hover {
-        background-color: $dark;
+        background-color: nb-theme(menu-bg);
+        color: nb-theme(color-success);
+        min-width: 140px;
+        font-weight: nb-theme(menu-active-font-weight);
     }
 
-    ul.navbar-nav {
-        .nav-item {
-            margin-left: 0.5em;
+    .dropdown-item {
+        font-family: nb-theme(menu-font-family);
+        font-size: nb-theme(menu-font-size);
+        font-weight: nb-theme(menu-font-weight);
+        background: nb-theme(menu-bg);
+        color: nb-theme(menu-fg);
+        min-width: 120px;
+        padding: nb-theme(menu-item-padding);
+
+        a {
+            padding: nb-theme(menu-item-padding);
+            border-radius: nb-theme(menu-submenu-item-border-radius);
         }
     }
 
+    .dropdown-menu {
+        box-sizing: border-box;
+        outline-color: #0f6ab4;
+        font-size: 0.875rem;
+        line-height: 1.5rem;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: nb-theme(btn-border-radius);
+        border-bottom-right-radius: nb-theme(btn-border-radius);
+        -webkit-margin-before: 1em;
+        -webkit-margin-after: 1em;
+        -webkit-margin-start: 0;
+        -webkit-margin-end: 0px;
+        -webkit-padding-start: 0px;
+        list-style-type: none;
+        margin-top: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in;
+        border: none;
+        width: 100%;
+        background-color: white;
+        color: black;
+        padding: 0.5rem 0;
+        min-width: 140px;
+
+        .propic {
+            margin-top: 25px;
+        }
+    }
+
+    .propic {
+        margin-top: 5px;
+    }
+
+    .arrow {
+        position: absolute;
+        width: 0;
+        height: 0;
+    }
+
+    .arrow {
+        border-left: solid transparent;
+        border-right: solid transparent;
+
+        &::after {
+            position: absolute;
+            content: ' ';
+            width: 0;
+            height: 0;
+            top: 23px;
+            left: 15px;
+            border-left: solid transparent;
+            border-right: solid transparent;
+        }
+    }
+
+    .dropdown-item {
+        color: black;
+        background-color: white;
+        padding: 0.75rem 1.5rem;
+        text-transform: uppercase;
+        font-size: 0.875rem;
+        cursor: default;
+        margin-top: -2px;
+        &:hover {
+            background-color: nb-theme(color-success);
+            color: white;
+            min-width: 140px;
+            font-weight: nb-theme(menu-active-font-weight);
+        }
+    }
+
+    .nb-location {
+        color: #0f6ab4;
+    }
+
+    .control-item .profile-pic {
+        font-size: nb-theme(menu-icon-font-size);
+        width: nb-theme(menu-icon-font-size);
+        //margin: nb-theme(menu-icon-margin);
+        margin-top: 16px;
+        text-align: center;
+        color: nb-theme(menu-icon-color);
+    }
+
+    .control-item {
+        font-size: nb-theme(menu-icon-font-size);
+        width: nb-theme(menu-icon-font-size);
+        margin: nb-theme(menu-icon-margin);
+        text-align: center;
+        color: nb-theme(menu-icon-color);
+    }
+
+    .dropdown-toggle {
+        color: transparent;
+    }
+
+    .dropdown-toggle::after {
+        margin-left: 0.15em;
+    }
+    ul.navbar-nav {
+        padding: 0.2em;
+        .nav-item {
+            font-size: nb-theme(user-font-size);
+            line-height: nb-theme(user-line-height);
+            padding: nb-theme(menu-item-padding);
+            margin-top: 10px;
+            border-radius: nb-theme(menu-submenu-item-border-radius);
+
+            &.background {
+                color: nb-theme(user-fg);
+            }
+        }
+    }
     a.nav-link {
         font-weight: 400;
     }
+}
 
-    .navbar-toggler {
-        &:hover {
-            color: $navbar-dark-hover-color;
+@media screen and (min-width: 768px) {
+    .jh-navbar-toggler {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .jh-logo-container {
+        width: 100%;
+    }
+}
+
+.navbar-title {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* ==========================================================================
+Menu styles
+========================================================================== */
+
+:host /deep/ nb-menu {
+    display: inline;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+
+    nb-context-menu {
+        margin: 20px;
+    }
+
+    ul.menu-items {
+        margin: 20px;
+        padding: 0.5rem 0;
+
+        .menu-item {
+            border: none;
+            white-space: nowrap;
+
+            &:first-child {
+                border: none;
+            }
+
+            a {
+                cursor: pointer;
+                border-radius: 0;
+                padding: 0;
+
+                .menu-icon {
+                    font-size: 1.5rem;
+                    width: auto;
+                }
+
+                .menu-title {
+                    padding: 0.375rem 3rem;
+                    @include nb-rtl(text-align, right);
+                }
+
+                .menu-icon ~ .menu-title {
+                    @include nb-ltr(padding-left, 0);
+                    @include nb-rtl(padding-right, 0);
+                }
+
+                .menu-icon:first-child {
+                    @include nb-ltr(padding-left, 1rem);
+                    @include nb-rtl(padding-right, 1rem);
+                }
+            }
         }
     }
 }
