@@ -47,7 +47,7 @@
         "colors.js": "1.2.4",
         "core-js": "2.6.3",
         "d3": "5.7.0",
-        "datatables.net": "1.10.19",
+        "datatables.net": "1.11.3",
         "date-fns": "^2.0.0-alpha.16",
         "docsearch.js": "^2.5.2",
         "intl": "1.2.5",
